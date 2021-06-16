@@ -45,7 +45,7 @@
   padding: 0 10px;
 }
 .header__option > .MuiSvgIcon-root {
-  color: midnightblue;
+  color: #2e3191;
 }
 .header__option:hover > .MuiSvgIcon-root {
   color: red;
