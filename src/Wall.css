@@ -1,0 +1,57 @@
+.wall {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 4px 4px 2px gray;
+}
+.wall__top {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 10px;
+}
+.wall__avatar {
+  margin-right: 10px;
+}
+.wall__topInfo > h3 {
+  font-size: medium;
+}
+.wall__topInfo > p {
+  font-size: small;
+  color: gray;
+}
+.wall__image > img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  width: 100%;
+}
+.wall__bottom {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+}
+.wall__options {
+  padding-top: 10px;
+  border-top: 1px solid whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: medium;
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+}
+.wall__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.wall__buttons > p {
+  margin-left: 10px;
+}
+.wall__buttons:hover {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
