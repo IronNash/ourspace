@@ -9,9 +9,9 @@ function Feed() {
       <Post />
       <Wall
         profilePic="https://i.ytimg.com/vi/xxyJsDKTyHw/maxresdefault.jpg"
-        message="vai da bom"
+        message="mensagem pronta"
         timestamp="hora H"
-        username="sua mãe"
+        username="seu nome"
         image="https://i.ytimg.com/vi/xxyJsDKTyHw/maxresdefault.jpg"
       />
       <Wall />
