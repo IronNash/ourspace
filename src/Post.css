@@ -1,38 +1,38 @@
-.wall {
+.post {
   width: 100%;
   margin-top: 10px;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0px 4px 4px 2px gray;
 }
-.wall__top {
+.post__top {
   display: flex;
   position: relative;
   align-items: center;
   padding: 10px;
 }
-.wall__avatar {
+.post__avatar {
   margin-right: 10px;
 }
-.wall__topInfo > h3 {
+.post__topInfo > h3 {
   font-size: medium;
 }
-.wall__topInfo > p {
+.post__topInfo > p {
   font-size: small;
   color: gray;
 }
-.wall__image > img {
+.post__image > img {
   display: flex;
   align-items: center;
   margin-bottom: 2px;
   width: 100%;
 }
-.wall__bottom {
+.post__bottom {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 10px;
 }
-.wall__options {
+.post__options {
   padding-top: 10px;
   border-top: 1px solid whitesmoke;
   display: flex;
@@ -42,16 +42,16 @@
   cursor: pointer;
   padding: 10px;
 }
-.wall__buttons {
+.post__buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
 }
-.wall__buttons > p {
+.post__buttons > p {
   margin-left: 10px;
 }
-.wall__buttons:hover {
+.post__buttons:hover {
   background-color: whitesmoke;
   border-radius: 10px;
 }

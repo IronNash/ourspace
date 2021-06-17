@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Feed.css";
-import Post from "./MessageSender";
-import Wall from "./Wall";
+import MessageSender from "./MessageSender";
+import Post from "./Post";
 import db from "./firebase";
 
 function Feed() {
@@ -9,16 +9,16 @@ function Feed() {
 
   return (
     <div className="feed">
-      <Post />
-      <Wall
+      <MessageSender />
+      <Post
         profilePic="https://i.ytimg.com/vi/xxyJsDKTyHw/maxresdefault.jpg"
         message="mensagem pronta"
         timestamp="hora H"
         username="seu nome"
         image="https://i.ytimg.com/vi/xxyJsDKTyHw/maxresdefault.jpg"
       />
-      <Wall />
-      <Wall />
+      <Post />
+      <Post />
     </div>
   );
 }
