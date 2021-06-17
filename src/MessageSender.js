@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import "./Post.css";
+import "./MessageSender.css";
 import { Avatar } from "@material-ui/core";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+import { useStateValue } from "./StateProvider";
 
-function Post() {
+function MessageSender() {
   const [input, setInput] = useState("");
   const [imageUrl, setiImageUrl] = useState("");
+  const [{ user }, dispatch] = useStateValue();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,14 +19,14 @@ function Post() {
   };
 
   return (
-    <div className="post">
-      <div className="post__top">
-        <Avatar />
+    <div className="messageSender">
+      <div className="messageSender__top">
+        <Avatar src={user.photoURL} />
         <form>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="post__input"
+            className="messageSender__input"
             placeholder="A small post for mankind"
           />
           <input
@@ -37,16 +39,16 @@ function Post() {
           </button>
         </form>
       </div>
-      <div className="post__bottom">
-        <div className="post__option">
+      <div className="messageSender__bottom">
+        <div className="messageSender__option">
           <VideocamIcon style={{ color: "red" }} />
           <h3>Live VIdeo</h3>
         </div>
-        <div className="post__option">
+        <div className="messageSender__option">
           <PhotoLibraryIcon style={{ color: "green" }} />
           <h3>Photo/Video</h3>
         </div>
-        <div className="post__option">
+        <div className="messageSender__option">
           <InsertEmoticonIcon style={{ color: "orange" }} />
           <h3>Feeling/Status</h3>
         </div>
@@ -55,4 +57,4 @@ function Post() {
   );
 }
 
-export default Post;
+export default MessageSender;

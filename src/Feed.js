@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Feed.css";
-import Post from "./Post";
+import Post from "./MessageSender";
 import Wall from "./Wall";
+import db from "./firebase";
 
 function Feed() {
+  //realtime db connection
+
   return (
     <div className="feed">
       <Post />

@@ -1,4 +1,4 @@
-.post {
+.messageSender {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -6,16 +6,16 @@
   box-shadow: 0px 4px 4px 2px gray;
   width: 100%;
 }
-.post__top {
+.messageSender__top {
   display: flex;
   border-bottom: 1px solid whitesmoke;
   padding: 10px;
 }
-.post__top > form {
+.messageSender__top > form {
   display: flex;
   flex: 1;
 }
-.post__top > form > input {
+.messageSender__top > form > input {
   border: none;
   border-radius: 100px;
   outline-width: 0;
@@ -23,17 +23,17 @@
   margin: 0px 10px;
   background-color: whitesmoke;
 }
-.post__input {
+.messageSender__input {
   flex: 1;
 }
-.post__top > form > button {
+.messageSender__top > form > button {
   display: none;
 }
-.post__bottom {
+.messageSender__bottom {
   display: flex;
   justify-content: space-evenly;
 }
-.post__option {
+.messageSender__option {
   display: flex;
   padding: 10px;
   align-items: center;
@@ -41,11 +41,11 @@
   margin: 5px;
   cursor: pointer;
 }
-.post__option > h3 {
+.messageSender__option > h3 {
   font-size: medium;
   margin-left: 5px;
 }
-.post__option:hover {
+.messageSender__option:hover {
   background-color: whitesmoke;
   border-radius: 20px;
 }
