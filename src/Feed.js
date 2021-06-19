@@ -18,7 +18,6 @@ function Feed() {
   return (
     <div className="feed">
       <MessageSender />
-
       {posts.map((post) => (
         <Post
           key={post.id}
@@ -29,9 +28,6 @@ function Feed() {
           image={post.data.image}
         />
       ))}
-
-      <Post />
-      <Post />
     </div>
   );
 }

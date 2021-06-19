@@ -19,7 +19,6 @@ function App() {
             {/*sidebar*/}
             {/*widgets*/}
           </div>
-          )
         </>
       )}
     </div>
