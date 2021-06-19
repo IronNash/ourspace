@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { render } from "react-dom";
+import React from "react";
 import "../styles/Post.css";
 import { Avatar } from "@material-ui/core";
 import ThumbupIcon from "@material-ui/icons/ThumbUp";
@@ -7,7 +6,6 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import NearMeIcon from "@material-ui/icons/NearMe";
 
 function Post({ profilePic, image, username, timestamp, message }) {
-  const [color, setColor] = useState("gray");
   return (
     <div className="post">
       <div className="post__top">
@@ -24,13 +22,7 @@ function Post({ profilePic, image, username, timestamp, message }) {
         <img src={image} alt="" />
       </div>
       <div className="post__options">
-        <div
-          className="post__buttons"
-          style={{ color: color }}
-          onClick={() => {
-            setColor("#2e3191");
-          }}
-        >
+        <div className="post__buttons">
           <ThumbupIcon />
           <p>Like</p>
         </div>
@@ -48,4 +40,3 @@ function Post({ profilePic, image, username, timestamp, message }) {
 }
 
 export default Post;
-render(<Post />, document.getElementById("root"));
