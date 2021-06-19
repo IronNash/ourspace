@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
-import "./Post.css";
+import "../styles/Post.css";
 import { Avatar } from "@material-ui/core";
 import ThumbupIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";

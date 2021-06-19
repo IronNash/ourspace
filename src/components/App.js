@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "../styles/App.css";
 import { useStateValue } from "./StateProvider";
 import Login from "./Login";
 import Header from "./Header";
