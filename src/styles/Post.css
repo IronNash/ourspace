@@ -54,3 +54,47 @@
   background-color: whitesmoke;
   border-radius: 10px;
 }
+.comment {
+  flex-direction: column;
+  width: 100%;
+}
+.comment__sender {
+  display: flex;
+  border-top: 1px solid whitesmoke;
+  padding: 10px;
+}
+.comment__sender > form {
+  display: flex;
+  flex: 1;
+}
+.comment__sender > form > input {
+  border: none;
+  border-radius: 100px;
+  outline-width: 0;
+  padding: 10px 20px;
+  margin: 0px 10px;
+  background-color: whitesmoke;
+}
+.comment__sender > form > button {
+  display: none;
+}
+.comment__input {
+  flex: 1;
+}
+.comment__section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0px 10px;
+}
+.comment__avatar {
+  margin-right: 10px;
+}
+.comment__text {
+  display: flex;
+  margin-bottom: 10px;
+}
+.comment__text > p {
+  margin-top: 7px;
+  font-size: medium;
+}

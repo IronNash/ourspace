@@ -9,23 +9,27 @@ function Feed() {
   useEffect(() => {
     db.collection("posts")
       .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) =>
-        setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
-      );
+      .onSnapshot((snapshot) => {
+        setPosts(
+          snapshot.docs.map((doc) => ({ id: doc.id, post: doc.data() }))
+        );
+      });
   }, []);
   //realtime db connection
 
   return (
     <div className="feed">
       <MessageSender />
-      {posts.map((post) => (
+      {posts.map(({ id, post }) => (
         <Post
-          key={post.id}
-          profilePic={post.data.profilePic}
-          message={post.data.message}
-          timestamp={post.data.timestamp}
-          username={post.data.username}
-          image={post.data.image}
+          key={id}
+          postId={id}
+          profilePic={post.profilePic}
+          message={post.message}
+          timestamp={post.timestamp}
+          username={post.username}
+          image={post.image}
+          comments={post.comments}
         />
       ))}
     </div>
