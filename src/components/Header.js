@@ -39,18 +39,26 @@ function Header() {
           <Avatar src={user.photoURL} />
           <h4>{user.displayName}</h4>
         </div>
+        <div className="header__icon">
         <IconButton>
           <AddIcon />
         </IconButton>
+        </div>
+        <div className="header__icon">
         <IconButton>
           <ForumIcon />
         </IconButton>
+        </div>
+        <div className="header__icon">
         <IconButton>
           <SettingsIcon />
         </IconButton>
+        </div>
+        <div className="header__login">
         <IconButton>
           <ExpandMoreIcon />
         </IconButton>
+        </div>
       </div>
     </div>
   );

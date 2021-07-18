@@ -4,7 +4,6 @@ import "../styles/Post.css";
 import { Avatar } from "@material-ui/core";
 import ThumbupIcon from "@material-ui/icons/ThumbUp";
 import CommentIcon from "@material-ui/icons/Comment";
-import NearMeIcon from "@material-ui/icons/NearMe";
 import db from "./firebase";
 import firebase from "firebase";
 
@@ -105,10 +104,6 @@ function Post({ postId, profilePic, image, username, timestamp, message }) {
         >
           <CommentIcon />
           <p>Comment</p>
-        </div>
-        <div className="post__buttons">
-          <NearMeIcon />
-          <p>Share</p>
         </div>
       </div>
       <div className="comment" style={{ display: display }}>
