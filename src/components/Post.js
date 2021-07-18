@@ -14,8 +14,12 @@ function Post({ postId, profilePic, image, username, timestamp, message }) {
   const [comments, setComments] = useState([]);
   const [display, setDisplay] = useState("none");
   const [color, setColor] = useState("gray");
-  const [like, setLike] = useState("gray");
-
+  const [thumb, setThumb] = useState("gray");
+  const [isActive, setActive] = useState(false);
+  const toggleLike = () => {
+    setActive(!isActive);
+  };
+  
   useEffect(() => {
     let unsubscribe;
     if (postId) {
@@ -33,6 +37,7 @@ function Post({ postId, profilePic, image, username, timestamp, message }) {
     };
   }, [postId]);
 
+  // function to create a new comment
   const postComment = (event) => {
     event.preventDefault();
     db.collection("posts").doc(postId).collection("comments").add({
@@ -44,6 +49,26 @@ function Post({ postId, profilePic, image, username, timestamp, message }) {
     setComment("");
   };
 
+  // function to create a new like
+  const postLike = (event) => {
+    setThumb("#2e3191");
+    db.collection("posts").doc(postId).collection("likes").doc(user.uid).set({nome: user.displayName}
+    );
+  };
+
+  // check if the like documents for this user exists, and changes the like button color
+  var likeRef = db.collection("posts").doc(postId).collection("likes").doc(user.uid);
+  likeRef.get().then((doc) => {
+      if (doc.exists) {
+          setThumb("#2e3191");
+      } else {
+          setThumb("gray");
+      }
+  }).catch((error) => {
+    setThumb("gray");
+  });
+
+  // returns a rendered component
   return (
     <div className="post">
       <div className="post__top">
@@ -62,9 +87,9 @@ function Post({ postId, profilePic, image, username, timestamp, message }) {
       <div className="post__options">
         <div
           className="post__buttons"
-          style={{ color: like }}
+          style={{ color: thumb }}
           onClick={() => {
-            setLike("#2e3191");
+            postLike();
           }}
         >
           <ThumbupIcon />
