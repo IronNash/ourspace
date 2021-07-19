@@ -13,6 +13,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from "./StateProvider";
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { auth } from "./firebase";
 
 function Header() {
 
@@ -24,10 +25,11 @@ function Header() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleLogoff = () => {
-    setAnchorEl(null);
+  const handleLogoff = (event) => {
+    auth.signOut()
+    window.location.reload();
   };
-  
+
   return (
     <div className="header">
       <div className="header__left">
@@ -79,7 +81,9 @@ function Header() {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem onClick={handleLogoff}>Logout</MenuItem>
+          <MenuItem onClick={
+            handleLogoff          
+            }>Logout</MenuItem>
         </Menu>
         </div>
       </div>
