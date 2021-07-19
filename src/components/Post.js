@@ -14,10 +14,6 @@ function Post({ postId, profilePic, image, username, timestamp, message }) {
   const [display, setDisplay] = useState("none");
   const [color, setColor] = useState("gray");
   const [thumb, setThumb] = useState("gray");
-  const [isActive, setActive] = useState(false);
-  const toggleLike = () => {
-    setActive(!isActive);
-  };
   
   useEffect(() => {
     let unsubscribe;
