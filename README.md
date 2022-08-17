@@ -6,4 +6,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Use the following link to acess the deploy:
 
- [deployment](https://ourspace-326e8.web.app/)
+ [ourspace](https://ourspace-326e8.web.app/)
